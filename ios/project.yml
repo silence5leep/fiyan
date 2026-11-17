@@ -1,0 +1,45 @@
+name: SIAKAD
+options:
+  bundleIdPrefix: id.sch.smkpgri1po
+  deploymentTarget:
+    iOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    CODE_SIGN_STYLE: Automatic
+    SUPPORTS_MACCATALYST: "NO"
+    GENERATE_INFOPLIST_FILE: "NO"
+    ENABLE_USER_SCRIPT_SANDBOXING: "NO"
+
+targets:
+  SIAKAD:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: SIAKAD
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: SIAKAD/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: id.sch.smkpgri1po.siakad
+        PRODUCT_NAME: SIAKAD
+        MARKETING_VERSION: "1.3"
+        CURRENT_PROJECT_VERSION: "4"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: "NO"
+
+schemes:
+  SIAKAD:
+    build:
+      targets:
+        SIAKAD: all
+    run:
+      config: Debug
+    archive:
+      config: Release
